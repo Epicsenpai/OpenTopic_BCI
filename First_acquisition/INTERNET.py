@@ -5,16 +5,16 @@ import tensorflow as tf
 from scipy import stats
 
 
-
+part = "C:/Users/atSine/OneDrive/Project/BCI/BCI-code/OpenTopic_BCI/First_acquisition/"
 
 class INTERNET:
     def __init__(self, sample_rate,control_freq ,folder_path) -> None:
         print(folder_path)
         
-        self.scaler = joblib.load('models/' + folder_path + '/standard_scaler.pkl')
+        self.scaler = joblib.load(part+'models/' + folder_path + '/standard_scaler.pkl')
         print("Scaler loaded successfully.")
 
-        self.model = load_model('models/' + folder_path + '/' + folder_path + '.h5')
+        self.model = load_model(part+'models/' + folder_path + '/' + folder_path + '.h5')
 
         print("Model loaded successfully.")
 
